@@ -9,6 +9,6 @@ class DataController extends Controller
 {
     public function data()
     {
-        return "Ini dari data Data Controller namesapce";
+        return "Ini dari Data Controller namesapce";
     }
 }

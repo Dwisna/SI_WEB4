@@ -50,8 +50,8 @@ Route::get('user1/{name?}', function ($name = null){
     return $name? "Hallo, $name!" : "Hallo";
 });
 
-Route::get('user2/{name?}', function ($name = 'Hesti'){
-    return $name? "Hallo, $name!" : "Hallo Hesti";
+Route::get('user2/{name?}', function ($name = 'Dwisna'){
+    return $name? "Hallo, $name!" : "Hallo Dwisna";
 });
 
 Route::get('user3/{name}', function($name){
@@ -133,10 +133,9 @@ Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
-Route::group(['namespace' => 'App\Http\Controllers\Backend'], function () {
-    Route::resource('/pendidikan', PendidikanController::class)->names('pendidikan');
-    Route::resource('/pengalaman_kerja', PengalamanKerjaController::class)->names('pengalaman_kerja');
-});
+
+Route::resource('/pendidikan', PendidikanController::class)->names('pendidikan');
+Route::resource('/pengalaman_kerja', PengalamanKerjaController::class)->names('pengalaman_kerja');
 
 // Route::group(['namespace'=> 'backend'], function(){
 //     Route::resource('dashboard', 'DashboardController');
