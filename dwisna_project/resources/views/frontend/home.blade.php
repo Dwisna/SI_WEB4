@@ -1,6 +1,6 @@
 @extends('frontend.layouts.template')
 @section('content')
-    @include('frontend.layouts.hero')
+    @include('frontend.layouts.navbar')
 
     <!-- About Section -->
     <section id="about" class="about section">
